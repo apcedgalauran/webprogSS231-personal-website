@@ -47,8 +47,7 @@
             <p>My goal is to achieve financial freedom and make a positive impact through technology.</p>
 
             <h3>Favorite Video</h3>
-            <p><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Here is my favorite video of all time!</a></p>
-        </div>
+            <p><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="favorite-video-link">Here is my favorite video of all time!</a></p>
     </section>
 
     <!-- Gallery Section (Vue.js for Gallery) -->
@@ -63,24 +62,26 @@
 
     <!-- Contact Section (Vue.js for Contact Form) -->
     <section id="contact">
-        <h2>Contact</h2>
-        <div id="vue-contact">
-            <div v-if="!submitted">
-                <form @submit.prevent="submitForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" v-model="name" placeholder="Enter your name" required>
-
-                    <label for="feedback">Feedback:</label>
-                    <textarea id="feedback" v-model="feedback" placeholder="Your feedback" required></textarea>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-            <div v-else>
-                <p>Thank you for your feedback, {{ name }}!</p>
-            </div>
-        </div>
-    </section>
+      <h2>Contact</h2>
+      <div id="vue-contact" class="contact-form">
+          <div v-if="!submitted">
+              <form @submit.prevent="submitForm">
+                  <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" v-model="name" placeholder="Enter your name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="feedback">Feedback:</label>
+                      <textarea id="feedback" v-model="feedback" placeholder="Your feedback" required></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Submit</button>
+              </form>
+          </div>
+          <div v-else>
+              <p class="thank-you-message">Thank you for your feedback, <strong>{{ name }}</strong>!</p>
+          </div>
+      </div>
+  </section>
 
     <!-- Footer -->
     <footer>

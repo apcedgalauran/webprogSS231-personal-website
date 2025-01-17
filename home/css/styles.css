@@ -17,11 +17,6 @@ body {
   height: 100%;
 }
 
-/* Main content takes available space */
-main {
-  flex: 1;
-}
-
 /* Navigation Bar */
 .navbar {
   position: fixed;
@@ -61,7 +56,7 @@ main {
   padding: 80px 50px;
   height: 100vh;
   background-color: #f8f8f8;
-  flex-wrap: wrap; /* Allow flex items to wrap */
+  flex-wrap: wrap;
 }
 
 .hero .content {
@@ -207,8 +202,97 @@ footer {
   padding: 20px;
   background-color: #2f2f2f;
   color: #e4d6c1;
-  position: relative;
-  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fff;
+  padding: 60px 20px;
+  border-top: 5px solid #d1c7c1;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+  border-bottom: 2px solid #d1c7c1;
+  padding-bottom: 15px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #d1c7c1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d1c7c1;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+.submit-btn {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4a4a4a;
+}
+
+.thank-you-message {
+  font-size: 1.3rem;
+  color: #4a4a4a;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* Update Link Color for Favorite Video */
+.favorite-video-link {
+  color: #d1c7c1;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.favorite-video-link:hover {
+  color: #2f2f2f;
 }
 
 /* Responsive Design */
@@ -238,5 +322,15 @@ footer {
   .gallery img {
       max-width: 100%;
       margin-bottom: 20px;
+  }
+
+  /* Contact Section */
+  #contact {
+      padding: 40px 15px;
+  }
+
+  .contact-form {
+      width: 100%;
+      margin: 0;
   }
 }
