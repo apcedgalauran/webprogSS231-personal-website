@@ -4,7 +4,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  padding-bottom: 60px; /* Space for footer at the bottom */
+  background-color: #f8f8f8; /* Light neutral background */
+  color: #4a4a4a; /* Muted grey text */
+  padding-bottom: 60px; /* Space for footer */
 }
 
 /* Navigation Bar */
@@ -62,13 +64,13 @@ body {
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 30px;
-  color: #4a4a4a; /* Medium muted grey */
+  color: #4a4a4a; /* Muted grey */
 }
 
 .hero .btn {
   display: inline-block;
   background-color: #2f2f2f;
-  color: #e4d6c1;
+  color: #e4d6c1; /* Light earthy tone */
   text-decoration: none;
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -136,13 +138,19 @@ body {
 
 /* Contact Section */
 #contact {
-  margin-bottom: 80px; /* Add space before the footer */
+  margin-bottom: 80px;
   padding: 20px;
   background-color: #f0f0f0;
 }
 
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
 footer {
-  clear: both; /* Ensure the footer doesn't overlap content */
+  clear: both;
   padding: 20px;
   background-color: #333;
   color: white;
