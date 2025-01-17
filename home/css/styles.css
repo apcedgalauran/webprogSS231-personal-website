@@ -38,33 +38,47 @@ body {
 /* Hero Section */
 .hero {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 40px;
-  background-color: #f4f4f4;
+  padding: 80px 50px;
+  height: 100vh;
+  background-color: #f8f8f8; /* Light neutral background */
 }
 
 .hero .content {
-  max-width: 50%;
+  max-width: 600px;
 }
 
-.hero .content h1 {
-  font-size: 36px;
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
 .hero .highlight {
-  color: #007BFF;
+  color: #d1c7c1; /* Earthy highlight */
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #4a4a4a; /* Medium muted grey */
 }
 
 .hero .btn {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
+  display: inline-block;
+  background-color: #2f2f2f;
+  color: #e4d6c1;
   text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero .btn:hover {
-  background-color: #0056b3;
+  background-color: #4a4a4a; /* Lighter grey */
+  color: #fff;
 }
 
 .hero .image-frame img {
