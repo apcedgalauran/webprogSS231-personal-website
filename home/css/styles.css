@@ -5,12 +5,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   padding-bottom: 60px; /* Space for footer at the bottom */
-  background-color: #f5f5f5; /* Light gray background for a neutral tone */
 }
 
 /* Navigation Bar */
 .navbar {
-  background-color: #333; /* Dark background for navbar */
+  background-color: #333;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -41,7 +40,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #f4f4f4;
 }
 
 .hero .content {
@@ -50,15 +49,14 @@ body {
 
 .hero .content h1 {
   font-size: 36px;
-  color: #333; /* Dark text color */
 }
 
 .hero .highlight {
-  color: #6a4e23; /* Earthy tone for highlighting */
+  color: #007BFF;
 }
 
 .hero .btn {
-  background-color: #6a4e23; /* Earthy button color */
+  background-color: #007BFF;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -66,7 +64,7 @@ body {
 }
 
 .hero .btn:hover {
-  background-color: #4b3c1e; /* Darker shade for hover effect */
+  background-color: #0056b3;
 }
 
 .hero .image-frame img {
@@ -76,9 +74,8 @@ body {
 
 /* About Section */
 .about {
-  background-color: #fafafa; /* Light background for the about section */
+  background-color: #f9f9f9;
   padding: 40px;
-  color: #333; /* Dark text for readability */
 }
 
 .about h2 {
@@ -97,14 +94,13 @@ body {
 /* Gallery Section */
 .gallery {
   padding: 40px;
-  background-color: #ffffff; /* White background for the gallery section */
+  background-color: #fff;
   text-align: center;
 }
 
 .gallery h3 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333; /* Dark text color */
 }
 
 .gallery .gallery-container {
@@ -128,14 +124,13 @@ body {
 #contact {
   margin-bottom: 80px; /* Add space before the footer */
   padding: 20px;
-  background-color: #f0f0f0; /* Light gray background for the contact section */
-  color: #333; /* Dark text for contrast */
+  background-color: #f0f0f0;
 }
 
 footer {
   clear: both; /* Ensure the footer doesn't overlap content */
   padding: 20px;
-  background-color: #333; /* Dark footer */
+  background-color: #333;
   color: white;
   text-align: center;
 }
@@ -155,7 +150,7 @@ label {
 input, textarea {
   padding: 10px;
   font-size: 14px;
-  border: 1px solid #ccc; /* Light gray border for inputs */
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -163,12 +158,12 @@ button {
   padding: 10px;
   font-size: 14px;
   border: none;
-  background-color: #6a4e23; /* Earthy button color */
+  background-color: #007BFF;
   color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #4b3c1e; /* Darker earthy tone on hover */
+  background-color: #0056b3;
 }
