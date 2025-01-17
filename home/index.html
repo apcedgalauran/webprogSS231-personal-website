@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I'm Ezekiel Galauran</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -52,21 +51,34 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section (Vue.js for Gallery) -->
     <section id="gallery" class="gallery">
         <h3>Picture Gallery</h3>
-        <div class="gallery-container">
-            <img src="462553918_3997388743822653_4814874926446819363_n.jpg" alt="Image 1">
-            <img src="eze3.jfif" alt="Image 2">
-            <img src="eze2.jpg" alt="Image 3">
+        <div id="vue-gallery" class="gallery-container">
+            <div v-for="image in images" :key="image.src" class="gallery-item">
+                <img :src="image.src" :alt="image.alt">
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section (To be handled with Vue.js later) -->
+    <!-- Contact Section (Vue.js for Contact Form) -->
     <section id="contact">
         <h2>Contact</h2>
         <div id="vue-contact">
-            <!-- Vue.js code for contact will go here -->
+            <div v-if="!submitted">
+                <form @submit.prevent="submitForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" v-model="name" placeholder="Enter your name" required>
+
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" v-model="feedback" placeholder="Your feedback" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div v-else>
+                <p>Thank you for your feedback, {{ name }}!</p>
+            </div>
         </div>
     </section>
 
@@ -77,5 +89,7 @@
 
     <!-- Link to Vue.js (for later use) -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="gallery.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
