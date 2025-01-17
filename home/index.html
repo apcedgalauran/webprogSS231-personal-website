@@ -3,116 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Ezekiel Galauran</title>
+    <title> Hi, I'm Ezekiel Galauran</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Add Vue.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Personal Profile Web Page</h1>
         </header>
-        
         <main>
-            <!-- Vue.js Picture Gallery -->
-            <div id="gallery-app">
-                <picture-gallery></picture-gallery>
-            </div>
-
-            <!-- Vue.js Guestbook Form -->
-            <div id="guestbook-app">
-                <guestbook-form></guestbook-form>
-            </div>
+            <section class="main-content">
+                <div>
+                    <strong>About Me</strong>
+                    <br>I'm a second-year CS student at Asia Pacific College, and overall just a chill guy.
+                </div>
+                <div>
+                    <strong>Education</strong>
+                    <br>My secondary studies were at Las Piñas City National Science High School, where I became a national champion in journalism.
+                </div>
+                <div>
+                    <strong>Course</strong>
+                    <br>I'm studying Computer Science with a specialization in Software and Systems.
+                </div>
+                <div>
+                    <strong>IT Experience</strong>
+                    <br>My college studies include learning Java and Python.
+                </div>
+                <div>
+                    <strong>Hobbies</strong>
+                    <ul>
+                        <li>Playing the guitar</li>
+                        <li>Playing sports like basketball and volleyball</li>
+                        <li>Playing online games like Valorant</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>Goal</strong>
+                    <br>My goal is to achieve financial freedom.
+                </div>
+                <div>
+                    <strong>Favorite Video</strong>
+                    <br><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Here is my favorite video of all time!</a>
+                </div>
+                <div>
+                    <strong>Valorant Skills</strong>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency</th>
+                        </tr>
+                        <tr>
+                            <td>Shooting</td>
+                            <td>Pro</td>
+                        </tr>
+                        <tr>
+                            <td>Strafe</td>
+                            <td>Pro</td>
+                        </tr>
+                        <tr>
+                            <td>Tracking</td>
+                            <td>Pro</td>
+                        </tr>
+                        <tr>
+                            <td>Game Sense</td>
+                            <td>Pro</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <aside class="sidebar">
+                <strong>Picture Gallery</strong>
+                <br>
+                <img src="462553918_3997388743822653_4814874926446819363_n.jpg" alt="Image 1">
+                <img src="eze3.jfif" alt="Image 2">
+                <img src="eze2.jpg" alt="Image 3">
+            </aside>
         </main>
-
         <footer>
             Asia Pacific College
         </footer>
     </div>
-
-    <!-- Picture Gallery Vue Component -->
-    <script type="text/x-template" id="picture-gallery-template">
-        <div class="gallery">
-            <h3>Picture Gallery</h3>
-            <div class="gallery-container">
-                <img v-for="(image, index) in images" :key="index" :src="image.src" :alt="image.alt" class="gallery-image" />
-            </div>
-        </div>
-    </script>
-
-    <!-- Guestbook Form Vue Component -->
-    <script type="text/x-template" id="guestbook-form-template">
-        <div class="guestbook">
-            <h3>Leave a Message</h3>
-            <form @submit.prevent="submitForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" v-model="form.name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" v-model="form.email" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" v-model="form.message" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-
-            <div v-if="submitted">
-                <h4>Thank you for your message, {{ form.name }}!</h4>
-                <p><strong>Message:</strong> {{ form.message }}</p>
-            </div>
-        </div>
-    </script>
-
-    <!-- Vue.js Application -->
-    <script>
-        // Vue Component for Picture Gallery
-        Vue.component('picture-gallery', {
-            template: '#picture-gallery-template',
-            data() {
-                return {
-                    images: [
-                        { src: '462553918_3997388743822653_4814874926446819363_n.jpg', alt: 'Image 1' },
-                        { src: 'eze3.jfif', alt: 'Image 2' },
-                        { src: 'eze2.jpg', alt: 'Image 3' },
-                    ]
-                };
-            }
-        });
-
-        // Vue Component for Guestbook Form
-        Vue.component('guestbook-form', {
-            template: '#guestbook-form-template',
-            data() {
-                return {
-                    form: {
-                        name: '',
-                        email: '',
-                        message: ''
-                    },
-                    submitted: false
-                };
-            },
-            methods: {
-                submitForm() {
-                    this.submitted = true;
-                    // Here you could send the form data to a server
-                }
-            }
-        });
-
-        new Vue({
-            el: '#gallery-app'
-        });
-
-        new Vue({
-            el: '#guestbook-app'
-        });
-    </script>
 </body>
 </html>
