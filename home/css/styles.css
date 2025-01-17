@@ -3,20 +3,26 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+  font-family: Arial, sans-serif; /* Added a default font for better appearance */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
 }
 
 /* Header and footer styles */
 header, footer {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7; /* Lighter background for a subtle effect */
   padding: 20px;
   text-align: center;
   font-weight: bold;
+  color: #333; /* Ensures header/footer text is dark for readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for better separation */
 }
 
 /* Main content layout */
 main {
   display: flex;
   flex-direction: row;
+  gap: 20px; /* Added gap between main content and sidebar for spacing */
+  padding: 20px; /* Added padding to provide breathing room */
 }
 
 /* Main content section */
@@ -26,18 +32,26 @@ main {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px; /* Improved spacing between content blocks */
 }
 
 /* Individual content blocks */
 .main-content > div {
-  background-color: #f1f1f1;
-  width: 300px;
-  margin: 10px;
+  background-color: #f9f9f9; /* Slightly lighter background for content blocks */
+  width: calc(33.333% - 20px); /* Automatically adjusts to 3 columns */
+  margin: 10px 0;
   text-align: center;
-  padding: 10px;
-  line-height: 1.5;
+  padding: 20px; /* Increased padding for better content spacing */
+  line-height: 1.6; /* Improved readability */
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Adds a soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.main-content > div:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Darker shadow on hover for emphasis */
 }
 
 /* Sidebar styles */
@@ -46,39 +60,54 @@ main {
   background-color: #f5f5f5;
   padding: 20px;
   text-align: center;
+  border-radius: 8px; /* Rounded corners for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Shadow for depth */
 }
 
 /* Sidebar image styles */
 .sidebar img {
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.sidebar img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 20px;
+  background-color: #fff; /* Table background for contrast */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures borders don't overflow the rounded corners */
 }
 
 table th, table td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  border: 1px solid #ddd; /* Softer border color */
+  padding: 12px;
   text-align: center;
+  font-size: 14px; /* Slightly smaller font for table content */
 }
 
 table th {
-  background-color: #e9e9e9;
+  background-color: #f0f0f0; /* Subtle header background */
+  font-weight: bold;
+  color: #333; /* Dark text for contrast */
 }
 
 /* Link styling */
 a {
   color: #007bff;
   text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for link color */
 }
 
 a:hover {
   text-decoration: underline;
+  color: #0056b3; /* Darker shade on hover for visual feedback */
 }
