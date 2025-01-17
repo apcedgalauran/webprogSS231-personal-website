@@ -1,113 +1,109 @@
-/* General container layout */
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  font-family: Arial, sans-serif; /* Added a default font for better appearance */
-  box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
-}
-
-/* Header and footer styles */
-header, footer {
-  background-color: #f7f7f7; /* Lighter background for a subtle effect */
-  padding: 20px;
-  text-align: center;
-  font-weight: bold;
-  color: #333; /* Ensures header/footer text is dark for readability */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for better separation */
-}
-
-/* Main content layout */
-main {
-  display: flex;
-  flex-direction: row;
-  gap: 20px; /* Added gap between main content and sidebar for spacing */
-  padding: 20px; /* Added padding to provide breathing room */
-}
-
-/* Main content section */
-.main-content {
-  flex: 2;
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Improved spacing between content blocks */
-}
-
-/* Individual content blocks */
-.main-content > div {
-  background-color: #f9f9f9; /* Slightly lighter background for content blocks */
-  width: calc(33.333% - 20px); /* Automatically adjusts to 3 columns */
-  margin: 10px 0;
-  text-align: center;
-  padding: 20px; /* Increased padding for better content spacing */
-  line-height: 1.6; /* Improved readability */
-  font-size: 16px;
-  border-radius: 8px; /* Rounded corners for a softer look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Adds a soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-}
-
-.main-content > div:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Darker shadow on hover for emphasis */
-}
-
-/* Sidebar styles */
-.sidebar {
-  flex: 1;
-  background-color: #f5f5f5;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px; /* Rounded corners for consistency */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Shadow for depth */
-}
-
-/* Sidebar image styles */
-.sidebar img {
   width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 8px; /* Rounded corners for images */
-  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
-.sidebar img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Table styles */
-table {
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: #fff; /* Table background for contrast */
-  border-radius: 8px; /* Rounded corners for the table */
-  overflow: hidden; /* Ensures borders don't overflow the rounded corners */
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 10;
 }
 
-table th, table td {
-  border: 1px solid #ddd; /* Softer border color */
-  padding: 12px;
-  text-align: center;
-  font-size: 14px; /* Slightly smaller font for table content */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
-table th {
-  background-color: #f0f0f0; /* Subtle header background */
-  font-weight: bold;
-  color: #333; /* Dark text for contrast */
+.navbar ul li {
+  margin: 0 15px;
 }
 
-/* Link styling */
-a {
-  color: #007bff;
+.navbar ul li a {
+  color: white;
   text-decoration: none;
-  transition: color 0.3s ease; /* Smooth transition for link color */
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #0056b3; /* Darker shade on hover for visual feedback */
+.navbar ul li a:hover {
+  color: #4caf50;
+}
+
+/* Section styles */
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+#about {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
+}
+
+#education {
+  background: #f4f4f4;
+}
+
+#skills {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+  color: white;
+}
+
+#hobbies {
+  background: #f4f4f4;
+}
+
+#gallery {
+  background: linear-gradient(135deg, #ff5722, #ff8a50);
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
